@@ -1,41 +1,48 @@
 'use client';
 
 import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
 
 const offerings = [
   {
-    title: 'Physiotherapy',
-    description: 'Heal faster and move better with expert physiotherapy.',
+    title: '12 Pranayama Techniques',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
     image: '/images/yoga-with-kira.jpeg',
     buttonText: 'Book an Appointment',
   },
   {
-    title: 'Nutrition Consultation',
-    description: 'Personalized diet plans for a healthier you.',
+    title: '10+ Meditation Types',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
     image: '/images/yoga-with-kira.jpeg',
     buttonText: 'Book an Appointment',
   },
   {
-    title: 'Mental Wellness',
-    description: 'Confidential therapy sessions with trained professionals.',
+    title: 'Cleansing Techniques (Kriyas)',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
     image: '/images/yoga-with-kira.jpeg',
     buttonText: 'Book an Appointment',
   },
   {
-    title: 'Yoga Sessions',
-    description: 'Relax and strengthen your body with guided yoga.',
+    title: 'Free diet consultation',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
     image: '/images/yoga-with-kira.jpeg',
     buttonText: 'Book an Appointment',
   },
   {
-    title: 'Health Checkups',
-    description: 'Stay on top of your health with regular checkups.',
+    title: 'Therapy Yoga for medical conditions',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
     image: '/images/yoga-with-kira.jpeg',
     buttonText: 'Book an Appointment',
   },
   {
-    title: 'Skincare Treatment',
-    description: 'Glow with our expert skincare routines.',
+    title: 'Goal-based exercise programs',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
     image: '/images/yoga-with-kira.jpeg',
     buttonText: 'Book an Appointment',
   },
@@ -43,19 +50,26 @@ const offerings = [
 
 const Offerings = () => {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">
-          Our Offerings
+    <section className="py-20 bg-white">
+      {/* Section Header */}
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-gray-800">
+          Our Yoga Class <span className="text-green-500">Offerings</span>
         </h2>
+        <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </div>
 
+      {/* Cards Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {offerings.map((offering, index) => (
             <div
               key={index}
-              className="relative group w-full h-80 overflow-hidden rounded-xl shadow-md"
+              className="relative group w-full h-120 overflow-hidden rounded-2xl shadow-sm bg-white border"
             >
-              {/* ✅ Use image from object */}
+              {/* Background Image */}
               <Image
                 src={offering.image}
                 alt={offering.title}
@@ -63,22 +77,32 @@ const Offerings = () => {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
 
-              {/* Gradient Fade */}
-              <div className="absolute bottom-0 left-0 right-0 h-40 group-hover:h-52 transition-all duration-500 bg-gradient-to-t from-white via-white/90 to-transparent z-10 pointer-events-none" />
+              {/* Gradient Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 h-44 group-hover:h-56 transition-all duration-500 bg-gradient-to-t from-white via-white/90 to-transparent z-10 pointer-events-none" />
 
-              {/* Text */}
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[90%] text-center z-20 transition-transform duration-500 group-hover:-translate-y-10">
+              {/* Title & Description */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[90%] text-center z-20 transition-transform duration-500 group-hover:-translate-y-12">
                 <h3 className="text-lg font-semibold text-gray-800">
                   {offering.title}
                 </h3>
-                <p className="text-sm text-gray-600">{offering.description}</p>
+                <p className="text-sm text-gray-600 mt-1">
+                  {offering.description}
+                </p>
               </div>
 
-              {/* Button on Hover */}
-              <div className="absolute left-1/2 bottom-6 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 transition-all duration-500 z-30 pointer-events-none group-hover:pointer-events-auto">
-                <button className="bg-green-600 text-white px-6 py-2 rounded-full font-medium text-sm shadow-md hover:bg-green-700 transition">
-                  {offering.buttonText}
-                </button>
+              {/* Buttons */}
+              <div className=" whitespace-nowrap absolute left-1/2 bottom-6 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 transition-all duration-500 z-30 pointer-events-none group-hover:pointer-events-auto">
+                <div className="flex items-center  justify-center">
+                  {/* Text Button */}
+                  <button className="bg-green-600 text-white px-10 py-2 rounded-full font-medium text-sm shadow-md hover:bg-green-700 transition">
+                    {offering.buttonText}
+                  </button>
+
+                  {/* Arrow Button */}
+                  <button className="bg-green-600 hover:bg-green-700 transition text-white p-2 rounded-full shadow-md">
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </div>
               </div>
             </div>
           ))}
