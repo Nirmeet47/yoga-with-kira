@@ -32,7 +32,7 @@ const Testimonials = () => {
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
-  const handleDotClick = (index) => {
+  const handleDotClick = (index : any) => {
     setActiveIndex(index);
     setIsAutoPlaying(false);
     // Resume auto-play after 8 seconds of inactivity
@@ -52,7 +52,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-20 bg-white relative">
+    <section className=" pb-10 bg-white relative">
       {/* Section Header */}
       <div className="text-center mb-12 px-4">
         <h2 className="text-4xl font-bold text-gray-800">
