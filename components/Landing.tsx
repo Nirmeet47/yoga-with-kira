@@ -13,7 +13,7 @@ const Landing: React.FC = () => {
         {/* Background Image */}
         <div className="relative w-full h-full rounded-3xl overflow-hidden">
           <Image
-            src="/vercel.svg" // Replace with your actual image path
+            src="/images/yoga-with-kira.jpeg"
             alt="Yoga background"
             fill
             className="object-cover object-center"

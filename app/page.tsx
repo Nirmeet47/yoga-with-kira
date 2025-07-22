@@ -1,3 +1,4 @@
+import AboutSection from "@/components/AboutSection";
 import Landing from "@/components/Landing";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
@@ -7,6 +8,7 @@ export default function Home() {
     <>
     <Navbar />
     <Landing />
+    <AboutSection />
     </>
   );
 }
