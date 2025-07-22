@@ -52,7 +52,7 @@ const Offerings = () => {
   return (
     <section className="py-20 bg-white">
       {/* Section Header */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 px-4">
         <h2 className="text-4xl font-bold text-gray-800">
           Our Yoga Class <span className="text-green-500">Offerings</span>
         </h2>
@@ -91,14 +91,11 @@ const Offerings = () => {
               </div>
 
               {/* Buttons */}
-              <div className=" whitespace-nowrap absolute left-1/2 bottom-6 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 transition-all duration-500 z-30 pointer-events-none group-hover:pointer-events-auto">
-                <div className="flex items-center  justify-center">
-                  {/* Text Button */}
-                  <button className="bg-green-600 text-white px-10 py-2 rounded-full font-medium text-sm shadow-md hover:bg-green-700 transition">
+              <div className="whitespace-nowrap absolute left-1/2 bottom-6 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 transition-all duration-500 z-30 pointer-events-none group-hover:pointer-events-auto">
+                <div className="flex items-center justify-center gap-2">
+                  <button className="bg-green-600 text-white px-6 py-2 rounded-full font-medium text-sm shadow-md hover:bg-green-700 transition">
                     {offering.buttonText}
                   </button>
-
-                  {/* Arrow Button */}
                   <button className="bg-green-600 hover:bg-green-700 transition text-white p-2 rounded-full shadow-md">
                     <ArrowRight className="w-5 h-5" />
                   </button>
@@ -106,6 +103,31 @@ const Offerings = () => {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Success Badge Line - Placed at Bottom */}
+      <div className="flex items-center justify-center mt-20 relative px-4">
+        {/* Horizontal Line */}
+        <div className="absolute w-full h-px bg-gray-300 top-1/2 left-0"></div>
+
+        {/* Centered Badge */}
+        <div className="relative z-10 bg-white px-6 py-2 rounded-full border border-gray-300 text-gray-800 text-sm font-medium flex items-center space-x-3 shadow-sm">
+          <span>500+ Successful Sessions</span>
+          {/* Green Stars */}
+          <span className="flex space-x-1">
+            {[...Array(5)].map((_, i) => (
+              <svg
+                key={i}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                className="w-4 h-4 text-green-500"
+              >
+                <path d="M12 2l2.9 6.5L22 9.3l-5 5 1.2 7.7L12 18.6 5.8 22l1.2-7.7-5-5 7.1-0.8L12 2z" />
+              </svg>
+            ))}
+          </span>
         </div>
       </div>
     </section>
