@@ -5,6 +5,7 @@ import Testimonials from "@/components/Testimonals";
 import YogaOfferings from "@/components/YogaOfferings";
 import Image from "next/image";
 import ContactSection from "@/components/ContactUs";
+import ImageGallery from "@/components/ImageGallery";
 export default function Home() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Home() {
     <YogaOfferings />
     <Testimonials />
     <ContactSection />
-    </>
+    <ImageGallery />
+      </>
   );
 }
