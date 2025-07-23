@@ -8,7 +8,6 @@ interface YogaGalleryProps {
 }
 
 export default function YogaGallery({ className = '' }: YogaGalleryProps) {
-  // Define 6 images with varying heights and vertical offsets for visual variety
   const images = [
     { id: 1, height: 280, offsetY: 0, alt: 'Yoga pose 1' },
     { id: 2, height: 240, offsetY: 20, alt: 'Yoga pose 2' },
