@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Testimonials from "@/components/Testimonals";
 import YogaOfferings from "@/components/YogaOfferings";
 import Image from "next/image";
-
+import ContactSection from "@/components/ContactUs";
 export default function Home() {
   return (
     <>
@@ -13,6 +13,7 @@ export default function Home() {
     <AboutSection />
     <YogaOfferings />
     <Testimonials />
+    <ContactSection />
     </>
   );
 }
