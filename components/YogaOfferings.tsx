@@ -90,7 +90,7 @@ const Offerings = () => {
                 </p>
               </div>
 
-              {/* Buttons */}
+              {/* Buttons : Book my appointment */}
               <div className="whitespace-nowrap absolute left-1/2 bottom-6 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 transition-all duration-500 z-30 pointer-events-none group-hover:pointer-events-auto">
                 <div className="flex items-center justify-center gap-2">
                   <button className="bg-green-600 text-white px-6 py-2 rounded-full font-medium text-sm shadow-md hover:bg-green-700 transition">
