@@ -36,7 +36,7 @@ export default function FAQSection() {
           Frequently Asked Questions
         </h2>
 
-        <div className="space-y-2">
+        <div  className="space-y-2">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (

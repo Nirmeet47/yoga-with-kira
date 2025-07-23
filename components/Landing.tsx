@@ -13,7 +13,7 @@ const Landing: React.FC = () => {
         {/* Background Image */}
         <div className="relative w-full h-full rounded-3xl overflow-hidden">
           <Image
-            src="/images/yoga-with-kira.jpeg"
+            src="/images/landing-bg.jpg"
             alt="Yoga background"
             fill
             className="object-cover object-center"
@@ -25,24 +25,23 @@ const Landing: React.FC = () => {
         {/* Hero Content */}
         <div className="absolute inset-0 z-10 flex items-center justify-center">
           <div className="text-center text-white max-w-4xl px-6">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-6 leading-tight">
-              Welcome to Yoga
+            <h1 className=" text-5xl md:text-6xl lg:text-7xl font-light mb-6 leading-tight">
+              Welcome to Yoga 
               <br />
-              <span className="text-green-400">with Kira</span>
+              <span>with Kira</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
               incididunt ut labore et dolore magna aliqua.
             </p>
             <div className="flex justify-center items-center   ">
-                <button className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full text-lg font-medium transition-colors duration-300">
+                <button className="bg-[#35402A]   text-white px-8 py-3 rounded-full text-lg font-medium transition-colors duration-300">
                     Start your Journey Today
                 </button>
-                <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-4 rounded-full transition-colors duration-300">
+                <button className="bg-[#A9D941] border-4 border-[#35402A] text-white px-4 py-4 rounded-full transition-colors duration-300">
                     <ArrowRight className="w-5 h-5" />
                 </button>
-                </div>
-
+            </div>
           </div>
         </div>
       </div>
