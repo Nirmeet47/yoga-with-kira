@@ -6,6 +6,7 @@ import YogaOfferings from "@/components/YogaOfferings";
 import Image from "next/image";
 import ContactSection from "@/components/ContactUs";
 import ImageGallery from "@/components/ImageGallery";
+import FAQSection from "@/components/Faqs";
 export default function Home() {
   return (
     <>
@@ -16,6 +17,7 @@ export default function Home() {
     <Testimonials />
     <ContactSection />
     <ImageGallery />
+    <FAQSection />
       </>
   );
 }
