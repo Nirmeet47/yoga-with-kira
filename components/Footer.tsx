@@ -1,12 +1,14 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import { Linkedin, Facebook, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-green-800 text-white py-8 px-8">
+    <footer className="bg-[#35402A] text-white py-10 px-6">
       <div className="max-w-6xl mx-auto">
-        {/* Logo Section */}
+        {/* Logo */}
         <div className="text-center mb-8">
           <div className="text-4xl font-light tracking-wide">
             <span className="text-sm uppercase tracking-wider block mb-1 text-white">
@@ -16,101 +18,55 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Horizontal Line */}
-        <div className="border-t border-white/30 mb-6"></div>
+        {/* Divider */}
+        <div className="border-t border-white/30 mb-6" />
 
         {/* Navigation Links */}
         <nav className="mb-6">
           <ul className="flex flex-wrap justify-center items-center gap-8 md:gap-12 text-sm font-light tracking-wide">
-            <li>
-              <Link 
-                href="/" 
-                className="hover:text-lime-400 transition-colors duration-200"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/about" 
-                className="hover:text-lime-400 transition-colors duration-200"
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/yoga-nutrition" 
-                className="hover:text-lime-400 transition-colors duration-200"
-              >
-                Yoga & Nutrition
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/testimonials" 
-                className="hover:text-lime-400 transition-colors duration-200"
-              >
-                Testimonials
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/retreats" 
-                className="hover:text-lime-400 transition-colors duration-200"
-              >
-                Our Retreats
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/contact" 
-                className="hover:text-lime-400 transition-colors duration-200"
-              >
-                Contact
-              </Link>
-            </li>
+            {[
+              { name: 'Home', href: '/' },
+              { name: 'About Us', href: '/about' },
+              { name: 'Yoga & Nutrition', href: '/yoga-nutrition' },
+              { name: 'Testimonials', href: '/testimonials' },
+              { name: 'Our Retreats', href: '/retreats' },
+              { name: 'Contact', href: '/contact' },
+            ].map((link) => (
+              <li key={link.name}>
+                <Link
+                  href={link.href}
+                  className="hover:text-[#A9D941] transition-colors duration-200"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
-        {/* Another Horizontal Line */}
-        <div className="border-t border-white/30 mb-6"></div>
+        {/* Divider */}
+        <div className="border-t border-white/30 mb-6" />
 
-        {/* Social Media Icons */}
+        {/* Social Icons */}
         <div className="flex justify-center gap-4 mb-6">
-          <Link 
-            href="#" 
-            className="group w-10 h-10 bg-green-800 border-2 border-white/70 hover:border-none rounded-full flex items-center justify-center transition-all duration-300 hover:bg-lime-400"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="w-5 h-5 text-white group-hover:text-green-800 transition-colors duration-300" />
-          </Link>
-          
-          <Link 
-            href="#" 
-            className="group w-10 h-10 bg-green-800 border-2 border-white/70 hover:border-none rounded-full flex items-center justify-center transition-all duration-300 hover:bg-lime-400"
-            aria-label="Facebook"
-          >
-            <Facebook className="w-5 h-5 text-white group-hover:text-green-800 transition-colors duration-300" />
-          </Link>
-          
-          <Link 
-            href="#" 
-            className="group w-10 h-10 bg-green-800 border-2 border-white/70 hover:border-none rounded-full flex items-center justify-center transition-all duration-300 hover:bg-lime-400"
-            aria-label="Instagram"
-          >
-            <Instagram className="w-5 h-5 text-white group-hover:text-green-800 transition-colors duration-300" />
-          </Link>
+          {[Linkedin, Facebook, Instagram].map((Icon, idx) => (
+            <Link
+              key={idx}
+              href="#"
+              className="group w-10 h-10 bg-[#35402A] border-2 border-white/70 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-[#A9D941] hover:border-transparent"
+              aria-label={`Social icon ${idx}`}
+            >
+              <Icon className="w-5 h-5 text-white group-hover:text-[#35402A] transition-colors duration-300" />
+            </Link>
+          ))}
         </div>
 
-        {/* Copyright Section */}
+        {/* Copyright */}
         <div className="text-center text-xs text-white/80 leading-relaxed">
           <p className="mb-1">
-            Copyright © 2025YogawithKira - All Rights Reserved
+            Copyright © 2025 YogawithKira - All Rights Reserved
           </p>
-          <p>
-            Developed by dotNET IT Services Pvt. Ltd.
-          </p>
+          <p>Developed by botNET IT Services Pvt. Ltd.</p>
         </div>
       </div>
     </footer>

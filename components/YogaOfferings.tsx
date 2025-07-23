@@ -50,11 +50,11 @@ const offerings = [
 
 const Offerings = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-50">
       {/* Section Header */}
       <div className="text-center mb-12 px-4">
         <h2 className="text-4xl font-bold text-gray-800">
-          Our Yoga Class <span className="text-green-500">Offerings</span>
+          Our Yoga Class <span className="text-[#A9D941]">Offerings</span>
         </h2>
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
@@ -92,12 +92,12 @@ const Offerings = () => {
 
               {/* Buttons : Book my appointment */}
               <div className="whitespace-nowrap absolute left-1/2 bottom-6 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-3 transition-all duration-500 z-30 pointer-events-none group-hover:pointer-events-auto">
-                <div className="flex items-center justify-center gap-2">
-                  <button className="bg-green-600 text-white px-6 py-2 rounded-full font-medium text-sm shadow-md hover:bg-green-700 transition">
+                <div className="flex items-center justify-center">
+                  <button className="bg-[#35402A] text-white px-6 py-2 rounded-full font-medium text-sm shadow-md  transition">
                     {offering.buttonText}
                   </button>
-                  <button className="bg-green-600 hover:bg-green-700 transition text-white p-2 rounded-full shadow-md">
-                    <ArrowRight className="w-5 h-5" />
+                  <button className="bg-[#A9D941] border-3 border-[#35402A] transition text-white p-2 rounded-full shadow-md">
+                    <ArrowRight className="w-5 h-5 text-[#35402A]"/>
                   </button>
                 </div>
               </div>

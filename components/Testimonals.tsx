@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const testimonials = [
   {
-    name: 'Ralph Edwards',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    name: "Ralph Edwards",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
-    name: 'Courtney Henry',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    name: "Courtney Henry",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
-    name: 'Arlene McCoy',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    name: "Arlene McCoy",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
 
@@ -21,10 +21,9 @@ const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Auto-play functionality
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
+
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % testimonials.length);
     }, 4000);
@@ -32,68 +31,67 @@ const Testimonials = () => {
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
-  const handleDotClick = (index : any) => {
-    setActiveIndex(index);
+  const pauseThenResume = () => {
     setIsAutoPlaying(false);
-    // Resume auto-play after 8 seconds of inactivity
     setTimeout(() => setIsAutoPlaying(true), 8000);
+  };
+
+  const handleDotClick = (index: number) => {
+    setActiveIndex(index);
+    pauseThenResume();
   };
 
   const handlePrevious = () => {
     setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 8000);
+    pauseThenResume();
   };
 
   const handleNext = () => {
     setActiveIndex((prev) => (prev + 1) % testimonials.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 8000);
+    pauseThenResume();
   };
 
   return (
-    <section className=" pb-10 bg-white relative">
+    <section className="pb-10 bg-gray-50 relative">
       {/* Section Header */}
       <div className="text-center mb-12 px-4">
-        <h2 className="text-4xl font-bold text-gray-800">
-          What Our <span className="text-green-500">Clients</span> Says
+        <h2 className="text-4xl font-bold text-[#35402A]">
+          What Our <span className="text-[#A9D941]">Clients</span> Say
         </h2>
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Arrows */}
       <div className="max-w-7xl mx-auto px-4 relative">
         <button
           onClick={handlePrevious}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-all duration-300 hover:scale-110"
-          aria-label="Previous testimonial"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-[#A9D941] rounded-full p-3 hover:bg-gray-100 transition-all duration-300 hover:scale-110"
         >
-          <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-[#35402A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        
+
         <button
           onClick={handleNext}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-all duration-300 hover:scale-110"
-          aria-label="Next testimonial"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-[#A9D941] rounded-full p-3 hover:bg-gray-100 transition-all duration-300 hover:scale-110"
         >
-          <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-[#35402A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
 
-        {/* Testimonial Cards - EXACTLY your original layout */}
+        {/* Cards */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className={`rounded-2xl p-6 w-full sm:w-[300px] text-center shadow-md transition-all duration-500 ${
+              className={`rounded-2xl p-6 w-full sm:w-[300px] text-center border transition-all duration-500 ${
                 i === activeIndex
-                  ? 'bg-green-900 text-white scale-105'
-                  : 'bg-white text-gray-800'
+                  ? "bg-[#35402A] text-white border-[#A9D941] scale-105 shadow-md"
+                  : "bg-white text-[#35402A] border-gray-200"
               }`}
             >
               {/* Stars */}
@@ -105,16 +103,14 @@ const Testimonials = () => {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     className={`w-4 h-4 ${
-                      i === activeIndex ? 'text-green-300' : 'text-green-500'
+                      i === activeIndex ? "text-[#A9D941]" : "text-[#35402A]"
                     }`}
                   >
                     <path d="M12 2l2.9 6.5L22 9.3l-5 5 1.2 7.7L12 18.6 5.8 22l1.2-7.7-5-5 7.1-0.8L12 2z" />
                   </svg>
                 ))}
               </div>
-              {/* Text */}
               <p className="text-sm">{t.text}</p>
-              {/* Name */}
               <h4 className="mt-4 font-semibold">{t.name}</h4>
             </div>
           ))}
@@ -127,12 +123,11 @@ const Testimonials = () => {
           <button
             key={i}
             onClick={() => handleDotClick(i)}
-            className={`transition-all duration-300 rounded-full hover:scale-125 ${
-              i === activeIndex 
-                ? 'bg-green-800 w-6 h-1.5' 
-                : 'bg-gray-300 w-4 h-1.5 hover:bg-gray-400'
+            className={`transition-all duration-300 rounded-full ${
+              i === activeIndex
+                ? "bg-[#35402A] w-6 h-1.5"
+                : "bg-gray-300 w-4 h-1.5 hover:bg-gray-400"
             }`}
-            aria-label={`Go to testimonial ${i + 1}`}
           />
         ))}
       </div>
