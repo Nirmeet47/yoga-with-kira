@@ -7,6 +7,7 @@ import Image from "next/image";
 import ContactSection from "@/components/ContactUs";
 import ImageGallery from "@/components/ImageGallery";
 import FAQSection from "@/components/Faqs";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
@@ -18,6 +19,7 @@ export default function Home() {
     <ContactSection />
     <ImageGallery />
     <FAQSection />
+    <Footer />
       </>
   );
 }
