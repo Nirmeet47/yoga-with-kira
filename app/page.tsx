@@ -8,18 +8,21 @@ import ContactSection from "@/components/ContactUs";
 import ImageGallery from "@/components/ImageGallery";
 import FAQSection from "@/components/Faqs";
 import Footer from "@/components/Footer";
+import InfiniteScrollText from "@/components/InfiniteScroll";
 export default function Home() {
   return (
     <>
     <Navbar />
     <Landing />
     <AboutSection />
+    <InfiniteScrollText />
     <YogaOfferings />
     <Testimonials />
     <ContactSection />
     <ImageGallery />
     <FAQSection />
     <Footer />
+
       </>
   );
 }

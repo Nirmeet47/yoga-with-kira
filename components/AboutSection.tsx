@@ -16,9 +16,9 @@ const AboutSection: React.FC = () => {
           
           {/* Image Section */}
           <div className="relative">
-            <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative w-full h-[500px] rounded-3xl overflow-hidden ">
               <Image
-                src="/images/yoga-with-kira.jpeg"
+                src="/images/about-kira.jpg"
                 alt="Yoga practice outdoors"
                 fill
                 className="object-cover"
@@ -47,26 +47,26 @@ const AboutSection: React.FC = () => {
             {/* Feature Tags */}
             <div className="space-y-4">
               <div className="flex flex-wrap gap-3">
-                <span className="bg-green-800 text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2">
+                <span className="bg-[#35402A] text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                   Certified Trainers
                 </span>
-                <span className="bg-green-800 text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2">
+                <span className="bg-[#35402A] text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                   Holistic Wellness
                 </span>
-                <span className="bg-green-800 text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2">
+                <span className="bg-[#35402A] text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                   Diverse Classes
                 </span>
               </div>
               
               <div className="flex flex-wrap gap-3">
-                <span className="bg-green-800 text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2">
+                <span className="bg-[#35402A] text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                   Mindful Practices
                 </span>
-                <span className="bg-green-800 text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2">
+                <span className="bg-[#35402A] text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                   Certified Trainers
                 </span>
