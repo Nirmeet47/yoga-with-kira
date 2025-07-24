@@ -8,42 +8,42 @@ const offerings = [
     title: '12 Pranayama Techniques',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-    image: '/images/yoga-with-kira.jpeg',
+    image: '/images/yoga-off-1.jpg',
     buttonText: 'Book an Appointment',
   },
   {
     title: '10+ Meditation Types',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-    image: '/images/yoga-with-kira.jpeg',
+    image: '/images/yoga-off-2.jpg',
     buttonText: 'Book an Appointment',
   },
   {
     title: 'Cleansing Techniques (Kriyas)',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-    image: '/images/yoga-with-kira.jpeg',
+    image: '/images/yoga-off-3.jpg',
     buttonText: 'Book an Appointment',
   },
   {
     title: 'Free diet consultation',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-    image: '/images/yoga-with-kira.jpeg',
+    image: '/images/yoga-off-4.jpg',
     buttonText: 'Book an Appointment',
   },
   {
     title: 'Therapy Yoga for medical conditions',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-    image: '/images/yoga-with-kira.jpeg',
+    image: '/images/yoga-off-5.jpg',
     buttonText: 'Book an Appointment',
   },
   {
     title: 'Goal-based exercise programs',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-    image: '/images/yoga-with-kira.jpeg',
+    image: '/images/yoga-off-6.jpg',
     buttonText: 'Book an Appointment',
   },
 ];

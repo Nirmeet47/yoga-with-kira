@@ -9,12 +9,12 @@ interface YogaGalleryProps {
 
 export default function YogaGallery({ className = '' }: YogaGalleryProps) {
   const images = [
-    { id: 1, height: 280, offsetY: 0, alt: 'Yoga pose 1' },
-    { id: 2, height: 240, offsetY: 20, alt: 'Yoga pose 2' },
-    { id: 3, height: 320, offsetY: -10, alt: 'Yoga pose 3' },
-    { id: 4, height: 260, offsetY: 15, alt: 'Yoga pose 4' },
-    { id: 5, height: 300, offsetY: -5, alt: 'Yoga pose 5' },
-    { id: 6, height: 250, offsetY: 25, alt: 'Yoga pose 6' },
+    { id: 1, height: 280, offsetY: 0, alt: 'Yoga pose 1', src: '/images/yoga-off-1.jpg' },
+    { id: 2, height: 240, offsetY: 20, alt: 'Yoga pose 2', src: '/images/yoga-off-2.jpg' },
+    { id: 3, height: 320, offsetY: -10, alt: 'Yoga pose 3', src: '/images/yoga-off-3.jpg' },
+    { id: 4, height: 260, offsetY: 15, alt: 'Yoga pose 4', src: '/images/yoga-off-4.jpg' },
+    { id: 5, height: 300, offsetY: -5, alt: 'Yoga pose 5', src: '/images/yoga-off-5.jpg' },
+    { id: 6, height: 250, offsetY: 25, alt: 'Yoga pose 6', src: '/images/yoga-off-6.jpg' },
   ];
 
   // Duplicate images for infinite scroll effect
@@ -34,7 +34,7 @@ export default function YogaGallery({ className = '' }: YogaGalleryProps) {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-md transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl">
                 <Image
-                  src="/images/yoga-with-kira.jpeg"
+                  src={image.src}
                   alt={image.alt}
                   width={200}
                   height={image.height}
