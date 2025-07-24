@@ -55,7 +55,7 @@ const Testimonials = () => {
     <section className="pb-10 bg-gray-50 relative">
       {/* Section Header */}
       <div className="text-center mb-12 px-4">
-        <h2 className="text-4xl font-bold text-[#35402A]">
+        <h2 className="font-amaranth text-5xl font-medium text-[#35402A]">
           What Our <span className="text-[#A9D941]">Clients</span> Say
         </h2>
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base">

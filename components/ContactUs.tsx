@@ -38,8 +38,8 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
         {/* Left: Info */}
         <div>
-          <h2 className="text-4xl font-semibold text-[#2E4023]">
-            <span className="text-[#8DD82E] font-bold">Contact</span>{' '}
+          <h2 className="font-amaranth text-5xl font-medium text-[#2E4023]">
+            <span className="text-[#8DD82E]">Contact</span>{' '}
             <span className="text-black">Us</span>
           </h2>
           <p className="text-sm text-[#2D3B36] mt-4 leading-relaxed max-w-lg">
@@ -73,7 +73,7 @@ export default function ContactSection() {
 
         {/* Right: Form */}
         <div className="bg-white rounded-2xl border border-[#e6e6e6] p-8">
-          <h3 className="text-3xl font-bold text-black text-center mb-8">
+          <h3 className="font-amaranth text-5xl font-medium text-black text-center mb-8">
             Send us a Message
           </h3>
           <form className="space-y-4">
@@ -81,29 +81,29 @@ export default function ContactSection() {
               <input
                 type="text"
                 placeholder="Name"
-                className="border border-[#e6e6e6] text-[#2D3B36] placeholder-[#7F928F] rounded-lg px-4 py-3 text-sm w-full focus:outline-none focus:ring-2 focus:ring-[#8DD82E]"
+                className="border border-[#e6e6e6] text-[#2D3B36] placeholder-[#7F928F] rounded-lg px-4 py-3 text-sm w-full  "
               />
               <input
                 type="email"
                 placeholder="Email"
-                className="border border-[#e6e6e6] text-[#2D3B36] placeholder-[#7F928F] rounded-lg px-4 py-3 text-sm w-full focus:outline-none focus:ring-2 focus:ring-[#8DD82E]"
+                className="border border-[#e6e6e6] text-[#2D3B36] placeholder-[#7F928F] rounded-lg px-4 py-3 text-sm w-full  "
               />
               <input
                 type="text"
                 placeholder="Phone"
-                className="border border-[#e6e6e6] text-[#2D3B36] placeholder-[#7F928F] rounded-lg px-4 py-3 text-sm w-full focus:outline-none focus:ring-2 focus:ring-[#8DD82E]"
+                className="border border-[#e6e6e6] text-[#2D3B36] placeholder-[#7F928F] rounded-lg px-4 py-3 text-sm w-full  "
               />
               <input
                 type="text"
                 placeholder="Subject"
-                className="border border-[#e6e6e6] text-[#2D3B36] placeholder-[#7F928F] rounded-lg px-4 py-3 text-sm w-full focus:outline-none focus:ring-2 focus:ring-[#8DD82E]"
+                className="border border-[#e6e6e6] text-[#2D3B36] placeholder-[#7F928F] rounded-lg px-4 py-3 text-sm w-full  "
               />
             </div>
-            <textarea
-              rows={4}
-              placeholder="Message"
-              className="border border-[#e6e6e6] text-[#2D3B36] placeholder-[#7F928F] rounded-lg px-4 py-3 text-sm w-full focus:outline-none focus:ring-2 focus:ring-[#8DD82E]"
-            ></textarea>
+   <textarea
+  placeholder="Message"
+  className="h-[180px] resize-none border border-[#e6e6e6] text-[#2D3B36] placeholder-[#7F928F] rounded-lg px-4 py-3 text-sm w-full  "
+></textarea>
+
 
             {/* Book appointment */}
             <div className="flex justify-center">
@@ -116,7 +116,7 @@ export default function ContactSection() {
                 </button>
                 <button
                   type="button"
-                  className="bg-[#8DD82E] hover:bg-lime-500 p-2 rounded-full transition"
+                  className="bg-[#8DD82E] border-[#35402A] border-3  p-2 rounded-full transition"
                 >
                   <ArrowRight className="w-4 h-4 stroke-black" />
                 </button>

@@ -25,10 +25,10 @@ const Landing: React.FC = () => {
         {/* Hero Content */}
         <div className="absolute inset-0 z-10 flex items-center justify-center">
           <div className="text-center text-white max-w-4xl px-6">
-            <h1 className=" text-5xl md:text-6xl lg:text-7xl font-light mb-6 leading-tight">
+            <h1 className="font-amaranth text-5xl md:text-6xl lg:text-7xl font-light mb-6 leading-tight">
               Welcome to Yoga 
               <br />
-              <span>with Kira</span>
+              <span className='font-amaranth'>with Kira</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -38,8 +38,8 @@ const Landing: React.FC = () => {
                 <button className="bg-[#35402A]   text-white px-8 py-3 rounded-full text-lg font-medium transition-colors duration-300">
                     Start your Journey Today
                 </button>
-                <button className="bg-[#A9D941] border-4 border-[#35402A] text-white px-4 py-4 rounded-full transition-colors duration-300">
-                    <ArrowRight className="w-5 h-5" />
+                <button className="bg-[#A9D941] border-3 border-[#35402A] text-white px-3 py-3 rounded-full transition-colors duration-300">
+                    <ArrowRight className="w-6 h-6 text-[#35402A]" />
                 </button>
             </div>
           </div>
@@ -49,12 +49,12 @@ const Landing: React.FC = () => {
       {/* Features Section */}
       <div className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
             {/* Personalized Guidance */}
             <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 transition-colors">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-4  rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-[#A9D941] rounded-full flex items-center justify-center">
                   <User className="w-5 h-5 text-white" />
                 </div>
               </div>
@@ -66,8 +66,8 @@ const Landing: React.FC = () => {
 
             {/* Mindful Practices */}
             <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 transition-colors">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-4   rounded-full flex items-center justify-center  ">
+                <div className="w-8 h-8 bg-[#A9D941] rounded-full flex items-center justify-center">
                   < HeartHandshake className="w-5 h-5 text-white" />
                 </div>
               </div>
@@ -79,8 +79,8 @@ const Landing: React.FC = () => {
 
             {/* Diverse Classes */}
             <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 transition-colors">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-4   rounded-full flex items-center justify-center  ">
+                <div className="w-8 h-8 bg-[#A9D941] rounded-full flex items-center justify-center">
                   <Layers className="w-5 h-5 text-white" />
                 </div>
               </div>
@@ -92,8 +92,8 @@ const Landing: React.FC = () => {
 
             {/* Relaxing Atmosphere */}
             <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 transition-colors">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-4   rounded-full flex items-center justify-center  ">
+                <div className="w-8 h-8 bg-[#A9D941] rounded-full flex items-center justify-center">
                   <Smile className="w-5 h-5 text-white" />
                 </div>
               </div>

@@ -53,7 +53,7 @@ const Offerings = () => {
     <section className="py-20 bg-gray-50">
       {/* Section Header */}
       <div className="text-center mb-12 px-4">
-        <h2 className="text-4xl font-bold text-gray-800">
+        <h2 className="font-amaranth text-5xl font-medium text-gray-800">
           Our Yoga Class <span className="text-[#A9D941]">Offerings</span>
         </h2>
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base">

@@ -32,7 +32,7 @@ export default function FAQSection() {
   return (
     <section className="w-full bg-[#f7f7f5] py-20 flex justify-center">
       <div className="w-[90%] max-w-5xl">
-        <h2 className="text-4xl font-bold text-center mb-10 font-sans text-black">
+        <h2 className="font-amaranth text-5xl font-medium text-center mb-10  text-black">
           Frequently Asked Questions
         </h2>
 

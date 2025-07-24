@@ -11,10 +11,16 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-gabarito: 'Gabarito', sans-serif;
+  --font-amaranth: 'Amaranth', sans-serif;
+
 }
 
 .font-gabarito {
   font-family: var(--font-gabarito);
+}
+
+.font-amaranth {
+  font-family: var(--font-amaranth);
 }
 
 @media (prefers-color-scheme: dark) {
