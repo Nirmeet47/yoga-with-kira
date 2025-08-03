@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Image */}
-        <div className="relative w-full h-48 sm:h-56 md:h-72 lg:h-80 rounded-2xl overflow-hidden mt-10">
+        <div className="relative w-full h-56 sm:h-72 md:h-80 lg:h-88 rounded-2xl overflow-hidden mt-10">
           <Image
             src="/images/home/about-kira.jpg"
             alt="Yoga session"

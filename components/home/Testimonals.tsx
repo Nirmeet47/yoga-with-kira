@@ -1,132 +1,201 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 
 const testimonials = [
   {
-    name: "Ralph Edwards",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Sarah Johnson",
+    text: "This service has transformed our business operations completely. The team's expertise and dedication to excellence is truly remarkable."
   },
   {
-    name: "Courtney Henry",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Michael Chen",
+    text: "Outstanding results delivered on time and within budget. I couldn't be happier with the professionalism and quality of work."
   },
   {
-    name: "Arlene McCoy",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Emily Rodriguez",
+    text: "The attention to detail and customer service is unmatched. They went above and beyond our expectations in every aspect."
   },
+  {
+    name: "David Thompson",
+    text: "Innovative solutions that perfectly addressed our unique challenges. The expertise and creativity of this team is impressive."
+  },
+  {
+    name: "Lisa Parker",
+    text: "Exceptional communication throughout the entire process. They made complex technical concepts easy to understand and implement."
+  },
+  {
+    name: "James Wilson",
+    text: "Reliable, efficient, and results-driven. This partnership has been instrumental in achieving our business goals and growth."
+  }
 ];
 
-const Testimonials = () => {
-  const [activeIndex, setActiveIndex] = useState(1);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+const TestimonialsCarousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+
+  // Create extended array for seamless looping
+  const extendedTestimonials = [
+    ...testimonials.slice(-2), // Last 2 items at the beginning
+    ...testimonials,
+    ...testimonials.slice(0, 2) // First 2 items at the end
+  ];
 
   useEffect(() => {
-    if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % testimonials.length);
+      setCurrentIndex(prev => prev + 1);
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying]);
+  }, []);
 
-  const pauseThenResume = () => {
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 8000);
+  useEffect(() => {
+    // Handle seamless looping
+    if (currentIndex === testimonials.length + 2) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(2);
+      }, 700);
+    } else if (currentIndex === -1) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(testimonials.length + 1);
+      }, 700);
+    }
+
+    // Re-enable transitions after jump
+    if (!isTransitioning) {
+      setTimeout(() => {
+        setIsTransitioning(true);
+      }, 50);
+    }
+  }, [currentIndex, isTransitioning, testimonials.length]);
+
+  const getCardStyles = (index: number, screenSize: 'mobile' | 'tablet' | 'desktop') => {
+    let centerIndex = currentIndex;
+    
+    // Adjust center calculation for different screen sizes
+    if (screenSize === 'tablet') {
+      centerIndex = currentIndex;
+    } else if (screenSize === 'desktop') {
+      centerIndex = currentIndex + 1;
+    }
+
+    const isCenter = index === centerIndex;
+    
+    return `rounded-2xl p-6 text-center border transition-all duration-700 flex-shrink-0 ${
+      isCenter
+        ? "bg-[#35402A] text-white border-[#A9D941] scale-105 shadow-lg"
+        : "bg-white text-[#35402A] border-gray-200 opacity-80"
+    }`;
   };
 
-  const handleDotClick = (index: number) => {
-    setActiveIndex(index);
-    pauseThenResume();
-  };
-
-  const handlePrevious = () => {
-    setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-    pauseThenResume();
-  };
-
-  const handleNext = () => {
-    setActiveIndex((prev) => (prev + 1) % testimonials.length);
-    pauseThenResume();
-  };
+  const StarRating = ({ isActive }: { isActive: boolean }) => (
+    <div className="flex justify-center mb-4 gap-1">
+      {[...Array(5)].map((_, idx) => (
+        <svg
+          key={idx}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className={`w-4 h-4 ${
+            isActive ? "text-[#A9D941]" : "text-[#35402A]"
+          }`}
+        >
+          <path d="M12 2l2.9 6.5L22 9.3l-5 5 1.2 7.7L12 18.6 5.8 22l1.2-7.7-5-5 7.1-0.8L12 2z" />
+        </svg>
+      ))}
+    </div>
+  );
 
   return (
-    <section className="pb-10 bg-gray-50 relative">
+    <section className="py-16 bg-gray-50 relative overflow-hidden">
       {/* Section Header */}
       <div className="text-center mb-12 px-4">
-        <h2 className="font-amaranth text-5xl font-medium text-[#35402A]">
+        <h2 className="font-bold text-4xl md:text-5xl text-[#35402A] mb-4">
           What Our <span className="text-[#A9D941]">Clients</span> Say
         </h2>
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">
+          Discover why our clients trust us to deliver exceptional results and outstanding service every time.
         </p>
       </div>
 
-      {/* Arrows */}
-      <div className="max-w-7xl mx-auto px-4 relative">
-        <button
-          onClick={handlePrevious}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-[#A9D941] rounded-full p-3 hover:bg-gray-100 transition-all duration-300 hover:scale-110"
-        >
-          <svg className="w-5 h-5 text-[#35402A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-
-        <button
-          onClick={handleNext}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-[#A9D941] rounded-full p-3 hover:bg-gray-100 transition-all duration-300 hover:scale-110"
-        >
-          <svg className="w-5 h-5 text-[#35402A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-
-        {/* Cards */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          {testimonials.map((t, i) => (
-            <div
-              key={i}
-              className={`rounded-2xl p-6 w-full sm:w-[300px] text-center border transition-all duration-500 ${
-                i === activeIndex
-                  ? "bg-[#35402A] text-white border-[#A9D941] scale-105 shadow-md"
-                  : "bg-white text-[#35402A] border-gray-200"
-              }`}
-            >
-              {/* Stars */}
-              <div className="flex justify-center mb-4">
-                {[...Array(5)].map((_, idx) => (
-                  <svg
-                    key={idx}
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className={`w-4 h-4 ${
-                      i === activeIndex ? "text-[#A9D941]" : "text-[#35402A]"
-                    }`}
-                  >
-                    <path d="M12 2l2.9 6.5L22 9.3l-5 5 1.2 7.7L12 18.6 5.8 22l1.2-7.7-5-5 7.1-0.8L12 2z" />
-                  </svg>
-                ))}
+      {/* Desktop Carousel - 3 cards */}
+      <div className="hidden lg:block max-w-6xl mx-auto px-4">
+        <div className="overflow-hidden">
+          <div 
+            className={`flex gap-6 ${isTransitioning ? 'transition-transform duration-700 ease-in-out' : ''}`}
+            style={{
+              transform: `translateX(-${(currentIndex) * (100/3)}%)`
+            }}
+          >
+            {extendedTestimonials.map((testimonial, index) => (
+              <div
+                key={`desktop-${index}`}
+                className={`${getCardStyles(index, 'desktop')} w-1/3`}
+              >
+                <StarRating isActive={index === currentIndex + 1} />
+                <p className="text-sm leading-relaxed mb-4">{testimonial.text}</p>
+                <h4 className="font-semibold text-lg">{testimonial.name}</h4>
               </div>
-              <p className="text-sm">{t.text}</p>
-              <h4 className="mt-4 font-semibold">{t.name}</h4>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Pagination Dots */}
+      {/* Tablet Carousel - 2 cards */}
+      <div className="hidden md:block lg:hidden max-w-4xl mx-auto px-4">
+        <div className="overflow-hidden">
+          <div 
+            className={`flex gap-6 ${isTransitioning ? 'transition-transform duration-700 ease-in-out' : ''}`}
+            style={{
+              transform: `translateX(-${(currentIndex) * 50}%)`
+            }}
+          >
+            {extendedTestimonials.map((testimonial, index) => (
+              <div
+                key={`tablet-${index}`}
+                className={`${getCardStyles(index, 'tablet')} w-1/2`}
+              >
+                <StarRating isActive={index === currentIndex} />
+                <p className="text-sm leading-relaxed mb-4">{testimonial.text}</p>
+                <h4 className="font-semibold text-lg">{testimonial.name}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Carousel - 1 card */}
+      <div className="md:hidden max-w-sm mx-auto px-4">
+        <div className="overflow-hidden">
+          <div 
+            className={`flex ${isTransitioning ? 'transition-transform duration-700 ease-in-out' : ''}`}
+            style={{
+              transform: `translateX(-${(currentIndex) * 100}%)`
+            }}
+          >
+            {extendedTestimonials.map((testimonial, index) => (
+              <div
+                key={`mobile-${index}`}
+                className={`${getCardStyles(index, 'mobile')} w-full`}
+              >
+                <StarRating isActive={index === currentIndex} />
+                <p className="text-sm leading-relaxed mb-4">{testimonial.text}</p>
+                <h4 className="font-semibold text-lg">{testimonial.name}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Progress indicators */}
       <div className="flex justify-center mt-8 gap-2">
         {testimonials.map((_, i) => (
-          <button
+          <div
             key={i}
-            onClick={() => handleDotClick(i)}
             className={`transition-all duration-300 rounded-full ${
-              i === activeIndex
-                ? "bg-[#35402A] w-6 h-1.5"
-                : "bg-gray-300 w-4 h-1.5 hover:bg-gray-400"
+              i === (currentIndex - 2 + testimonials.length) % testimonials.length
+                ? "bg-[#35402A] w-8 h-2"
+                : "bg-gray-300 w-2 h-2"
             }`}
           />
         ))}
@@ -135,4 +204,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default TestimonialsCarousel;

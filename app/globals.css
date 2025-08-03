@@ -48,3 +48,27 @@ body {
 .animate-scroll {
   animation: scroll 30s linear infinite;
 }
+
+@keyframes floatFancy {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-25px) rotate(-2deg) scale(1.02);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  75% {
+    transform: translateY(-20px) rotate(2deg) scale(1.02);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+.animate-float-fancy {
+  animation: floatFancy 6s ease-in-out infinite;
+}
+
+
