@@ -18,7 +18,7 @@ const AboutSection: React.FC = () => {
           <div className="relative">
             <div className="relative w-full h-[500px] rounded-3xl overflow-hidden ">
               <Image
-                src="/images/about-kira.jpg"
+                src="/images/home/about-kira.jpg"
                 alt="Yoga practice outdoors"
                 fill
                 className="object-cover"
@@ -76,7 +76,7 @@ const AboutSection: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default AboutSection;

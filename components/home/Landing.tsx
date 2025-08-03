@@ -13,7 +13,7 @@ const Landing: React.FC = () => {
         {/* Background Image */}
         <div className="relative w-full h-full rounded-3xl overflow-hidden">
           <Image
-            src="/images/landing-bg.jpg"
+            src="/images/home/landing-bg.jpg"
             alt="Yoga background"
             fill
             className="object-cover object-center"
