@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="bg-white">
+    <section className="bg-[#f7f7f7]">
       <div className="max-w-7xl mx-auto flex flex-col px-4 sm:px-6 lg:px-8 xl:px-12 py-4 sm:py-6 lg:py-8">
         {/* Top: Text part */}
         <div className="grid grid-cols-1 lg:grid-cols-2 items-start lg:items-center gap-4 lg:gap-6 xl:gap-8">
@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
         {/* Image */}
         <div className="relative w-full h-40 sm:h-56 md:h-70 lg:h-80 xl:h-[23rem] rounded-xl sm:rounded-2xl overflow-hidden mt-4 sm:mt-6 lg:mt-8">
           <Image
-            src="/images/home/about-kira.jpg"
+            src="/images/about/about-hero.png"
             alt="Yoga session"
             fill
             className="object-cover object-center"

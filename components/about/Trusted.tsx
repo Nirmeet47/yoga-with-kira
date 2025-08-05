@@ -21,13 +21,12 @@ export default function Trusted() {
         </p>
 
         {/* Testimonial Image */}
-        <div className="rounded-2xl overflow-hidden w-full shadow-md">
+        <div className="relative w-full rounded-2xl overflow-hidden shadow-md h-64 sm:h-80 md:h-96 lg:h-[500px]">
           <Image
-            src="/images/about/testimonial-group.png"
+            src="/images/about/trusted.png"
             alt="Happy Customers"
-            width={1200}
-            height={450}
-            className="w-full h-auto object-cover"
+            fill
+            className="object-cover"
           />
         </div>
 
@@ -60,6 +59,9 @@ export default function Trusted() {
           </div>
         </div>
       </div>
+
+      {/* Add spacing at bottom */}
+      <div className="h-12" />
     </section>
   );
 }

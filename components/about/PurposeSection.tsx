@@ -3,28 +3,28 @@
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 
-export default function PurposeDesktopSection() {
+export default function PurposeSection() {
   return (
-    <section className="relative bg-gray-50">
-      {/* TOP PART */}
-      <div className="flex items-center py-16 lg:py-0 lg:min-h-screen">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Overlapping Images */}
-          <div className="relative flex justify-center lg:justify-start">
-            {/* Main tall image */}
+    <section className="relative bg-[#f7f7f7] overflow-hidden pb-16">
+      {/* TOP SECTION */}
+      <div className="flex items-center py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* LEFT IMAGES */}
+          <div className="relative flex justify-center lg:justify-start mb-40 lg:mb-0">
+            {/* Main Image */}
             <div className="relative w-64 h-80 sm:w-72 sm:h-96 lg:w-72 lg:h-[420px] rounded-2xl overflow-hidden shadow-lg z-10 lg:ml-20">
               <Image
-                src="/images/about/purpose1.png"
+                src="/images/about/purpose1.jpg"
                 alt="Yoga Session"
                 fill
                 className="object-cover"
               />
             </div>
 
-            {/* Animated smaller image */}
-            <div className="absolute -bottom-20 left-10 sm:left-16 lg:left-8 w-52 h-72 sm:w-60 sm:h-80 lg:w-60 lg:h-[340px] rounded-2xl overflow-hidden shadow-lg animate-float-fancy">
+            {/* Floating Image */}
+            <div className="absolute -bottom-20 left-16 sm:left-16 lg:left-8 w-52 h-72 sm:w-60 sm:h-80 lg:w-60 lg:h-[340px] rounded-2xl overflow-hidden shadow-lg animate-float-fancy">
               <Image
-                src="/images/about/purpose2.png"
+                src="/images/about/purpose2.jpg"
                 alt="Yoga Pose"
                 fill
                 className="object-cover"
@@ -32,12 +32,11 @@ export default function PurposeDesktopSection() {
             </div>
           </div>
 
-          {/* Right: Text Content */}
+          {/* RIGHT TEXT */}
           <div className="text-left">
             <h2 className="font-amaranth text-3xl md:text-4xl leading-snug text-[#35402A] mb-4">
-              Rooted in{" "}
-              <span className="text-[#A9D941]">Purpose</span>, Guided by
-              Presence
+              Rooted in {" "}
+              <span className="text-[#A9D941]">Purpose</span>, Guided by Presence
             </h2>
 
             <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
@@ -50,20 +49,20 @@ export default function PurposeDesktopSection() {
               {[
                 {
                   title: "Calm & Soulful",
-                  desc: "Through breath, stillness, and flow, we help you reconnect with your body, quiet the mind, and awaken your inner peace."
+                  desc: "Through breath, stillness, and flow, we help you reconnect with your body, quiet the mind, and awaken your inner peace.",
                 },
                 {
                   title: "Warm & Welcoming",
-                  desc: "Whether you’re just starting out or deep in your practice, our studio is a safe, welcoming place to grow, heal, and simply be."
+                  desc: "Whether you’re just starting out or deep in your practice, our studio is a safe, welcoming place to grow, heal, and simply be.",
                 },
                 {
                   title: "Professional & Purpose-Driven",
-                  desc: "Guided with the intention to offer authentic, accessible yoga to all, we bring together experienced teachers and curated practices."
+                  desc: "Guided with the intention to offer authentic, accessible yoga to all, we bring together experienced teachers and curated practices.",
                 },
                 {
                   title: "Minimal & Modern",
-                  desc: "We are a space for stillness, strength, and self-discovery, helping people slow down, breathe deeply, and live more intentionally."
-                }
+                  desc: "We are a space for stillness, strength, and self-discovery, helping people slow down, breathe deeply, and live more intentionally.",
+                },
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3">
                   <CheckCircle2 className="text-[#A9D941] w-5 h-5 flex-shrink-0 mt-1" />
