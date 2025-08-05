@@ -20,8 +20,6 @@ export default function Home() {
     <ContactSection />
     <ImageGallery />
     <FAQSection />
-    <Footer />
-
       </>
   );
 }

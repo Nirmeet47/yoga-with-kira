@@ -2,7 +2,6 @@ import Hero from "@/components/about/Hero";
 import PurposeSection from "@/components/about/PurposeSection";
 import Trusted from "@/components/about/Trusted";
 import VisionMission from "@/components/about/VisionMission";
-import Footer from "@/components/home/Footer";
 import ImageGallery from "@/components/home/ImageGallery";
 
 export default function AboutSection() {
@@ -13,7 +12,6 @@ export default function AboutSection() {
     <PurposeSection />
     <Trusted />
     <ImageGallery />
-    <Footer />
     </>
   );
 }
