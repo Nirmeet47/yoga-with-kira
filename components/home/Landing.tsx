@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { ArrowRight, User,  HeartHandshake, Layers, Smile } from 'lucide-react';
-import Navbar from './Navbar';
 
 const Landing: React.FC = () => {
   return (
