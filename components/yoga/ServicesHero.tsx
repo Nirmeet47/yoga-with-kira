@@ -109,6 +109,32 @@ const Services: React.FC = () => {
 
         </div>
       </div>
+
+      {/* Stats section - Full width with different container */}
+      <div className="mt-8 sm:mt-12 lg:mt-16 bg-[#35402A] text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-8 sm:py-12 lg:py-16">
+          {/* Mobile: 2x2 grid, Tablet+: 1x4 grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:divide-x lg:divide-white/20 text-center">
+            <div className="lg:px-4">
+              <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold mb-1 sm:mb-2">21+</p>
+              <p className="text-xs sm:text-sm lg:text-base text-white/90">Yoga Style Workout</p>
+            </div>
+            <div className="lg:px-4">
+              <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold mb-1 sm:mb-2">10+</p>
+              <p className="text-xs sm:text-sm lg:text-base text-white/90">Years of Experience</p>
+            </div>
+            <div className="lg:px-4">
+              <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold mb-1 sm:mb-2">5,000+</p>
+              <p className="text-xs sm:text-sm lg:text-base text-white/90">Successful sessions</p>
+            </div>
+            <div className="lg:px-4">
+              <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold mb-1 sm:mb-2">50+</p>
+              <p className="text-xs sm:text-sm lg:text-base text-white/90">Achievable Events</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </section>
   );
 };
