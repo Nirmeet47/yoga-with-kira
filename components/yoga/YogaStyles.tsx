@@ -6,7 +6,7 @@ interface YogaGalleryProps {
   className?: string;
 }
 
-export default function YogaGallery({ className = '' }: YogaGalleryProps) {
+export default function YogaStyles({ className = '' }: YogaGalleryProps) {
   const images = [
     { id: 1, alt: 'Yoga pose 1', src: '/images/home/yoga-off-1.jpg' },
     { id: 2, alt: 'Yoga pose 2', src: '/images/home/yoga-off-2.jpg' },

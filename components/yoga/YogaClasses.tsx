@@ -20,11 +20,13 @@ const YogaClasses: React.FC = () => {
             Step onto the mat and discover what's possible.
           </p>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center items-center space-x-3">
+            {/* Pill Button */}
             <button className="bg-[#A9D941] text-black font-medium px-8 py-3 rounded-full hover:bg-lime-300 transition text-base sm:text-lg">
               Try a Free Class
             </button>
-            <button className="flex items-center justify-center w-12 h-12 rounded-full bg-white border-3 border-[#A9D941] transition">
+            {/* Arrow Button Outside */}
+            <button className="flex items-center justify-center w-12 h-12 rounded-full bg-white border-2 border-[#A9D941] hover:bg-gray-100 transition">
               <ArrowRight className="w-5 h-5 text-black" />
             </button>
           </div>
@@ -37,7 +39,7 @@ const YogaClasses: React.FC = () => {
           <div className="flex flex-col gap-8">
 
             {/* Card 1 */}
-            <div className="bg-white rounded-3xl shadow-sm overflow-hidden flex flex-1">
+            <div className="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-1">
               <div className="p-6 flex flex-col justify-center w-[60%]">
                 <h2 className="font-amaranth text-2xl md:text-[2rem] text-[#32412D] mb-2 font-medium leading-snug">
                   Therapy Yoga for Medical Conditions
@@ -52,18 +54,19 @@ const YogaClasses: React.FC = () => {
                   Mon - Fri @ 07:00 - 07:30 AM
                 </div>
               </div>
-              <div className="relative w-[40%] min-h-[14rem]">
+              <div className="relative w-[40%] min-h-[14rem] flex items-center p-4">
                 <Image
-                  src="/images/yoga/therapy.jpg"
+                  src="/images/retreats/retreats-hero.jpg"
                   alt="Therapy Yoga"
-                  fill
-                  className="object-cover"
+                  width={400}
+                  height={400}
+                  className="rounded-2xl object-cover w-full h-full"
                 />
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white rounded-3xl shadow-sm overflow-hidden flex flex-1">
+            <div className="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-1">
               <div className="p-6 flex flex-col justify-center w-[60%]">
                 <h2 className="font-amaranth text-2xl md:text-[2rem] text-[#32412D] mb-2 font-medium leading-snug">
                   12 Pranayama Techniques
@@ -78,25 +81,27 @@ const YogaClasses: React.FC = () => {
                   Mon - Fri @ 07:00 - 07:30 AM
                 </div>
               </div>
-              <div className="relative w-[40%] min-h-[14rem]">
+              <div className="relative w-[40%] min-h-[14rem] flex items-center p-4">
                 <Image
-                  src="/images/yoga/pranayama.jpg"
+                  src="/images/retreats/retreats-hero.jpg"
                   alt="Pranayama Techniques"
-                  fill
-                  className="object-cover"
+                  width={400}
+                  height={400}
+                  className="rounded-2xl object-cover w-full h-full"
                 />
               </div>
             </div>
           </div>
 
           {/* Right Column → Large Card */}
-          <div className="bg-white rounded-3xl shadow-sm overflow-hidden flex flex-col h-full">
-            <div className="relative flex-1 min-h-[28rem]">
+          <div className="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden flex flex-col h-full">
+            <div className="relative flex-1 min-h-[28rem] flex items-center p-4">
               <Image
-                src="/images/yoga/goal-exercise.jpg"
+                src="/images/retreats/retreats-hero.jpg"
                 alt="Goal-based exercise"
-                fill
-                className="object-cover"
+                width={600}
+                height={600}
+                className="rounded-2xl object-cover w-full h-full"
               />
             </div>
             <div className="p-6">
