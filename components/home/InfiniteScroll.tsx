@@ -13,7 +13,7 @@ const texts = [
 
 export default function InfiniteScrollText() {
   return (
-    <div className="w-full bg-gray-50 py-13 border-t border-b border-gray-300 overflow-hidden">
+    <div className="w-full bg-gray-50 py-13 border-t border-b overflow-hidden">
       <div className="flex w-max animate-scroll gap-12 text-4xl md:text-6xl font-gabarito font-bold text-[#234f26]">
         {[...texts, ...texts].map((text, idx) => (
           <span

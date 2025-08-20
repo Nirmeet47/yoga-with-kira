@@ -34,7 +34,7 @@ const contactItems = [
 
 export default function ContactSection() {
   return (
-    <section className="bg-[#f8f9f8] px-4 md:px-16 py-20 font-sans">
+    <section className="bg-[#f8f9f8] px-4 md:px-16 py-10 font-sans">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
         {/* Left: Info */}
         <div>

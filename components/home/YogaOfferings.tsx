@@ -50,9 +50,18 @@ const offerings = [
 
 const Offerings = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="relative pt-20 pb-10 bg-gray-50 overflow-hidden">
+      {/* ✅ Decorative Background Image - Middle Left */}
+      <Image
+        src="/images/home/offerings-bg.png"
+        alt="Offerings Background"
+        width={180}
+        height={180}
+        className="absolute top-5/9 -translate-y-1/2  left-0 object-contain opacity-80 pointer-events-none"
+      />
+
       {/* Section Header */}
-      <div className="text-center mb-12 px-4">
+      <div className="text-center mb-12 px-4 relative z-10">
         <h2 className="font-amaranth text-5xl font-medium text-gray-800">
           Our Yoga Class <span className="text-[#A9D941]">Offerings</span>
         </h2>
@@ -62,7 +71,7 @@ const Offerings = () => {
       </div>
 
       {/* Cards Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {offerings.map((offering, index) => (
             <div
@@ -97,7 +106,7 @@ const Offerings = () => {
                     {offering.buttonText}
                   </button>
                   <button className="bg-[#A9D941] border-3 border-[#35402A] transition text-white p-2 rounded-full shadow-md">
-                    <ArrowRight className="w-5 h-5 text-[#35402A]"/>
+                    <ArrowRight className="w-5 h-5 text-[#35402A]" />
                   </button>
                 </div>
               </div>
@@ -107,7 +116,7 @@ const Offerings = () => {
       </div>
 
       {/* Success Badge Line - Placed at Bottom */}
-      <div className="flex items-center justify-center mt-20 relative px-4">
+      <div className="flex items-center justify-center mt-20 relative px-4 z-10">
         {/* Horizontal Line */}
         <div className="absolute w-full h-px bg-gray-300 top-1/2 left-0"></div>
 

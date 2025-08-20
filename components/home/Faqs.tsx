@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { Plus, X } from 'lucide-react';
+import Image from 'next/image';
 
 const faqs = [
   {
@@ -30,13 +31,22 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full bg-[#f7f7f5] py-20 flex justify-center">
-      <div className="w-[90%] max-w-5xl">
-        <h2 className="font-amaranth text-5xl font-medium text-center mb-10  text-black">
+    <section className="relative w-full bg-gray-50 py-20 flex justify-center overflow-hidden">
+      {/* ✅ Top Right Background Image */}
+      <Image
+        src="/images/home/faq-bg.png"
+        alt="FAQ Background"
+        width={120}
+        height={120}
+        className="absolute top-0 right-0 object-contain pointer-events-none"
+      />
+
+      <div className="w-[90%] max-w-5xl relative z-10">
+        <h2 className="font-amaranth text-5xl font-medium text-center mb-10 text-black">
           Frequently Asked Questions
         </h2>
 
-        <div  className="space-y-2">
+        <div className="space-y-2">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (

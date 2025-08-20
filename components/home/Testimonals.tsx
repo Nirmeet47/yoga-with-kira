@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 const testimonials = [
   { name: "Sarah Johnson", text: "This service has transformed our business operations completely. The team's expertise and dedication to excellence is truly remarkable." },
@@ -61,89 +62,110 @@ const TestimonialsCarousel = () => {
   );
 
   return (
-    <section className="py-16 bg-gray-50 relative overflow-hidden">
-      {/* Header */}
-      <div className="text-center mb-12 px-4">
-        <h2 className="font-bold text-4xl md:text-5xl text-[#35402A] mb-4">
-          What Our <span className="text-[#A9D941]">Clients</span> Say
-        </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Discover why our clients trust us to deliver exceptional results and outstanding service every time.
-        </p>
-      </div>
+    <section className="py-30 bg-gray-50 relative overflow-hidden">
+      <Image
+        src="/images/home/testimonial-bg-2.png"
+        alt="decorative bottom-left"
+        width={200}
+        height={200}
+        className="absolute bottom-0 left-0 pointer-events-none select-none z-0 hidden sm:block"
+        priority
+      />
+      {/* Top-right now uses testimonial-bg-1.png */}
+      <Image
+        src="/images/home/testimonial-bg-1.png"
+        alt="decorative top-right"
+        width={120}
+        height={120}
+        className="absolute top-0 right-0 pointer-events-none select-none z-0 hidden sm:block"
+        priority
+      />
 
-      {/* Desktop (3) */}
-      <div className="hidden lg:block  mx-auto px-4">
-        <div className="overflow-hidden">
-          <div
-            className={`flex gap-6 ${isTransitioning ? "transition-transform duration-700 ease-in-out" : ""}`}
-            style={{
-              transform: `translateX(calc(-${currentIndex * (100 / 3)}% - ${currentIndex * 1.5}rem))`
-            }}
-          >
-            {extendedTestimonials.map((t, i) => (
-              <div key={`desktop-${i}`} className={`${getCardStyles(i, i === currentIndex + 1)} w-1/3`}>
-                <StarRating active={i === currentIndex + 1} />
-                <p className="text-sm mb-4">{t.text}</p>
-                <h4 className="font-semibold text-lg">{t.name}</h4>
-              </div>
-            ))}
+      {/* Content above backgrounds */}
+      <div className="relative z-10">
+        {/* Header */}
+        <div className="text-center mb-12 px-4">
+          <h2 className="font-bold text-4xl md:text-5xl text-[#35402A] mb-4">
+            What Our <span className="text-[#A9D941]">Clients</span> Say
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Discover why our clients trust us to deliver exceptional results and outstanding service every time.
+          </p>
+        </div>
+
+        {/* Desktop (3) */}
+        <div className="hidden lg:block  mx-auto px-4">
+          <div className="overflow-hidden">
+            <div
+              className={`flex gap-6 ${isTransitioning ? "transition-transform duration-700 ease-in-out" : ""}`}
+              style={{
+                transform: `translateX(calc(-${currentIndex * (100 / 3)}% - ${currentIndex * 1.5}rem))`
+              }}
+            >
+              {extendedTestimonials.map((t, i) => (
+                <div key={`desktop-${i}`} className={`${getCardStyles(i, i === currentIndex + 1)} w-1/3`}>
+                  <StarRating active={i === currentIndex + 1} />
+                  <p className="text-sm mb-4">{t.text}</p>
+                  <h4 className="font-semibold text-lg">{t.name}</h4>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Tablet (2) */}
-      <div className="hidden md:block lg:hidden max-w-4xl mx-auto px-4">
-        <div className="overflow-hidden">
-          <div
-            className={`flex gap-6 ${isTransitioning ? "transition-transform duration-700 ease-in-out" : ""}`}
-            style={{
-              transform: `translateX(calc(-${currentIndex * 50}% - ${currentIndex * 1.5}rem))`
-            }}
-          >
-            {extendedTestimonials.map((t, i) => (
-              <div key={`tablet-${i}`} className={`${getCardStyles(i, i === currentIndex)} w-1/2`}>
-                <StarRating active={i === currentIndex} />
-                <p className="text-sm mb-4">{t.text}</p>
-                <h4 className="font-semibold text-lg">{t.name}</h4>
-              </div>
-            ))}
+        {/* Tablet (2) */}
+        <div className="hidden md:block lg:hidden max-w-4xl mx-auto px-4">
+          <div className="overflow-hidden">
+            <div
+              className={`flex gap-6 ${isTransitioning ? "transition-transform duration-700 ease-in-out" : ""}`}
+              style={{
+                transform: `translateX(calc(-${currentIndex * 50}% - ${currentIndex * 1.5}rem))`
+              }}
+            >
+              {extendedTestimonials.map((t, i) => (
+                <div key={`tablet-${i}`} className={`${getCardStyles(i, i === currentIndex)} w-1/2`}>
+                  <StarRating active={i === currentIndex} />
+                  <p className="text-sm mb-4">{t.text}</p>
+                  <h4 className="font-semibold text-lg">{t.name}</h4>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Mobile (1) */}
-      <div className="md:hidden max-w-sm mx-auto px-4">
-        <div className="overflow-hidden">
-          <div
-            className={`flex gap-6 ${isTransitioning ? "transition-transform duration-700 ease-in-out" : ""}`}
-            style={{
-              transform: `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 1.5}rem))`
-            }}
-          >
-            {extendedTestimonials.map((t, i) => (
-              <div key={`mobile-${i}`} className={`${getCardStyles(i, i === currentIndex)} w-full`}>
-                <StarRating active={i === currentIndex} />
-                <p className="text-sm mb-4">{t.text}</p>
-                <h4 className="font-semibold text-lg">{t.name}</h4>
-              </div>
-            ))}
+        {/* Mobile (1) */}
+        <div className="md:hidden max-w-sm mx-auto px-4">
+          <div className="overflow-hidden">
+            <div
+              className={`flex gap-6 ${isTransitioning ? "transition-transform duration-700 ease-in-out" : ""}`}
+              style={{
+                transform: `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 1.5}rem))`
+              }}
+            >
+              {extendedTestimonials.map((t, i) => (
+                <div key={`mobile-${i}`} className={`${getCardStyles(i, i === currentIndex)} w-full`}>
+                  <StarRating active={i === currentIndex} />
+                  <p className="text-sm mb-4">{t.text}</p>
+                  <h4 className="font-semibold text-lg">{t.name}</h4>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Dots */}
-      <div className="flex justify-center mt-8 gap-2">
-        {testimonials.map((_, i) => (
-          <div
-            key={i}
-            className={`rounded-full transition-all duration-300 ${
-              i === (currentIndex - 2 + testimonials.length) % testimonials.length
-                ? "bg-[#35402A] w-8 h-2"
-                : "bg-gray-300 w-2 h-2"
-            }`}
-          />
-        ))}
+        {/* Dots */}
+        <div className="flex justify-center mt-8 gap-2">
+          {testimonials.map((_, i) => (
+            <div
+              key={i}
+              className={`rounded-full transition-all duration-300 ${
+                i === (currentIndex - 2 + testimonials.length) % testimonials.length
+                  ? "bg-[#35402A] w-8 h-2"
+                  : "bg-gray-300 w-2 h-2"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
