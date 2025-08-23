@@ -57,7 +57,7 @@ export default function NextRetreatsComponent() {
       </div>
 
       {/* Carousel */}
-      <div className="w-full overflow-hidden h-[450px]">
+      <div className="w-full overflow-hidden h-[250px] sm:h-[350px] md:h-[450px]">
         <div
           className="flex transition-transform duration-1000 ease-in-out h-full"
           style={{

@@ -18,8 +18,15 @@ export default function PreRegisterForm() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f7f5] py-16 px-4">
-      <div className="max-w-6xl mx-auto">
+    <div className="relative bg-[#f7f7f5] py-16 px-4 overflow-hidden">
+      {/* Decorative Top-Right Image */}
+      <img
+        src="/images/retreats/register-form-bg.png"
+        alt="Decorative"
+        className="absolute top-0 right-0 w-32 md:w-48 lg:w-64 pointer-events-none select-none"
+      />
+
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-12">
           <h1 className="font-amaranth text-5xl md:text-6xl font-medium mb-6">
@@ -90,26 +97,21 @@ export default function PreRegisterForm() {
               </div>
             </div>
 
-            {/* Submit Button with Arrow (Design Matched) */}
-<div className="flex justify-center items-center">
-  {/* Main Button */}
-  <button className="bg-[#A9D941]  font-semibold text-[#35402A] px-8 py-3 rounded-full text-lg  hover:bg-[#2a3221] transition-colors duration-300">
-    I'm Interested
-  </button>
+            {/* Submit Button with Arrow */}
+            <div className="flex justify-center items-center">
+              {/* Main Button */}
+              <button className="bg-[#A9D941] font-semibold text-[#35402A] px-8 py-3 rounded-full text-lg ">
+                I'm Interested
+              </button>
 
-  {/* Arrow Button */}
-  <button className="bg-white  border-4 border-[#A9D941]  p-3 rounded-full transition-colors duration-300">
-    <ArrowRight className="w-6 h-6 text-[#35402A]" />
-  </button>
-</div>
-
-
+              {/* Arrow Button */}
+              <button className="bg-white border-4 border-[#A9D941] p-3 rounded-full transition-colors duration-300">
+                <ArrowRight className="w-6 h-6 text-[#35402A]" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Decorative Elements */}
-      
     </div>
   );
 }
