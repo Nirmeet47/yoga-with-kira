@@ -43,7 +43,7 @@ export default function ContactSection() {
             <span className="text-black">Us</span>
           </h2>
           <p className="text-sm text-[#2D3B36] mt-4 leading-relaxed max-w-lg">
-            We're here to support your journey to better health and well-being.
+            We&apos;re here to support your journey to better health and well-being.
             Reach out today to ask questions, schedule a consultation.
           </p>
 

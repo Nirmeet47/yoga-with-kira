@@ -39,7 +39,7 @@ export default function Trusted() {
             <p className="text-sm sm:text-base max-w-xl mx-auto mb-6">
               Experience the calm, clarity, and connection of yoga — completely free.
               <br />
-              Step onto the mat and discover what's possible.
+              Step onto the mat and discover what&apos; possible.
             </p>
 
             <button className="mt-2 inline-flex items-center bg-lime-400 text-black font-medium px-6 py-2 rounded-full hover:bg-lime-300 transition">

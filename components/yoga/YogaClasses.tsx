@@ -17,7 +17,7 @@ const YogaClasses: React.FC = () => {
           <p className="text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed text-white/90">
             Experience the calm, clarity, and connection of yoga — completely free.
             <br />
-            Step onto the mat and discover what's possible.
+            Step onto the mat and discover what&apos;s possible.
           </p>
 
           <div className="flex justify-center items-center space-x-3">

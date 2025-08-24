@@ -101,7 +101,7 @@ export default function PreRegisterForm() {
             <div className="flex justify-center items-center">
               {/* Main Button */}
               <button className="bg-[#A9D941] font-semibold text-[#35402A] px-8 py-3 rounded-full text-lg ">
-                I'm Interested
+                I&apos;m Interested
               </button>
 
               {/* Arrow Button */}

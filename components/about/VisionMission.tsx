@@ -22,7 +22,7 @@ const VisionMission: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-              We envision a world where yoga is more than a practice — it's a way of life. A world where breath,
+              We envision a world where yoga is more than a practice — it&apos;s a way of life. A world where breath,
               movement, and stillness come together to foster conscious communities, compassionate living, and a deep
               connection to self, others, and the planet.
             </p>
@@ -99,7 +99,7 @@ const VisionMission: React.FC = () => {
             {/* Vision Box (top-right) */}
             <div className="absolute top-8 right-8 2xl:right-16 w-[360px] 2xl:w-[420px] bg-white rounded-lg shadow-lg p-6 z-20 transform hover:scale-105 transition-transform duration-300">
               <p className="text-gray-700 text-sm 2xl:text-base mb-6 leading-relaxed">
-                We envision a world where yoga is more than a practice — it's a way of life. A world where breath,
+                We envision a world where yoga is more than a practice — it&apos;s a way of life. A world where breath,
                 movement, and stillness come together to foster conscious communities, compassionate living, and a deep
                 connection to self, others, and the planet.
               </p>

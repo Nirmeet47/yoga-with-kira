@@ -1,12 +1,8 @@
 'use client';
-
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
-
 interface YogaGalleryProps {
   className?: string;
 }
-
 export default function YogaGallery({ className = '' }: YogaGalleryProps) {
   const images = [
     { id: 1, height: 280, offsetY: 0, alt: 'Yoga pose 1', src: '/images/home/yoga-off-1.jpg' },
@@ -16,8 +12,7 @@ export default function YogaGallery({ className = '' }: YogaGalleryProps) {
     { id: 5, height: 300, offsetY: -5, alt: 'Yoga pose 5', src: '/images/home/yoga-off-5.jpg' },
     { id: 6, height: 250, offsetY: 25, alt: 'Yoga pose 6', src: '/images/home/yoga-off-6.jpg' },
   ];
-
-  // Duplicate images for infinite scroll effect
+  
   const duplicatedImages = [...images, ...images, ...images];
 
   return (
