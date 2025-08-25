@@ -12,7 +12,7 @@ export default function PurposeSection() {
           {/* LEFT IMAGES */}
           <div className="relative flex justify-center lg:justify-start mb-40 lg:mb-0">
             {/* Main Image */}
-            <div className="relative w-64 h-80 sm:w-72 sm:h-96 lg:w-72 lg:h-[420px] rounded-2xl overflow-hidden shadow-lg z-10 lg:ml-20">
+            <div className="relative w-64 h-80 sm:w-72 sm:h-96 lg:w-72 lg:h-[420px] rounded-2xl overflow-hidden  lg:ml-20">
               <Image
                 src="/images/about/purpose1.jpg"
                 alt="Yoga Session"
@@ -22,7 +22,7 @@ export default function PurposeSection() {
             </div>
 
             {/* Floating Image */}
-            <div className="absolute -bottom-20 left-16 sm:left-16 lg:left-8 w-52 h-72 sm:w-60 sm:h-80 lg:w-60 lg:h-[340px] rounded-2xl overflow-hidden shadow-lg animate-float-fancy">
+            <div className="absolute -bottom-30 left-0 z-10 sm:left-18 lg:left-0 w-52 h-72 sm:w-60 sm:h-80 lg:w-60 lg:h-[340px] rounded-2xl overflow-hidden">
               <Image
                 src="/images/about/purpose2.jpg"
                 alt="Yoga Pose"
