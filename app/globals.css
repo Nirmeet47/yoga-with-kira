@@ -49,26 +49,17 @@ body {
   animation: scroll 30s linear infinite;
 }
 
-@keyframes floatFancy {
-  0% {
-    transform: translateY(0) rotate(0deg) scale(1);
+@keyframes spin360 {
+  from {
+    transform: rotate(0deg);
   }
-  25% {
-    transform: translateY(-25px) rotate(-2deg) scale(1.02);
-  }
-  50% {
-    transform: translateY(0) rotate(0deg) scale(1);
-  }
-  75% {
-    transform: translateY(-20px) rotate(2deg) scale(1.02);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg) scale(1);
+  to {
+    transform: rotate(360deg);
   }
 }
 
-.animate-float-fancy {
-  animation: floatFancy 6s ease-in-out infinite;
+.bg-rotate {
+  animation: spin360 60s linear infinite;
 }
 
 

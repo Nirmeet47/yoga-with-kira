@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
                 </button>
                 <button
                   type="button"
-                  className="bg-[#8DD82E] hover:bg-[#7BC429] border-3 border-[#35402A] p-3 sm:p-3.5 rounded-full transition-colors duration-200 flex-shrink-0 "
+                  className="bg-[#A9D941]  border-3 border-[#35402A] p-3 sm:p-3.5 rounded-full transition-colors duration-200 flex-shrink-0 "
                 >
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 stroke-black" />
                 </button>

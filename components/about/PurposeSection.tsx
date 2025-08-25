@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function PurposeSection() {
   return (
-    <section className="relative bg-[#f7f7f7] overflow-hidden pb-16">
+    <section className="relative bg-[#f7f7f7] overflow-hidden">
       {/* TOP SECTION */}
       <div className="flex items-center py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -82,7 +82,7 @@ export default function PurposeSection() {
       </div>
 
       {/* BOTTOM BADGE */}
-      <div className="flex items-center justify-center mt-16 relative px-4">
+      <div className="flex items-center justify-center  relative px-4">
         <div className="absolute w-full h-px bg-gray-300 top-1/2 left-0"></div>
         <div className="relative z-10 bg-white px-6 py-2 md:px-8 md:py-3 rounded-full border border-gray-300 text-gray-800 text-sm md:text-base font-medium flex items-center space-x-3 shadow-md">
           <span>500+ Successful Sessions</span>
