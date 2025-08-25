@@ -6,11 +6,11 @@ import Image from 'next/image';
 const Hero: React.FC = () => {
   return (
     <section className="bg-[#f7f7f7]">
-      <div className="max-w-7xl mx-auto flex flex-col px-4 sm:px-6 lg:px-8 xl:px-12 py-4 sm:py-6 lg:py-8">
+      <div className="max-w-7xl mx-auto flex flex-col px-4 sm:px-6 lg:px-8 xl:px-12 ">
         
         {/* Header Section */}
         <div className="text-center pt-6 pb-4">
-          <h1 className="font-amaranth text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-2">
+          <h1 className="font-amaranth text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 mb-6">
             <span className="text-[#A9D941]">Retreats</span> That Move You
             <br className="hidden sm:block" />
             Inside & Out
@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Main Image */}
-        <div className="relative w-full h-40 sm:h-56 md:h-72 lg:h-80 xl:h-[23rem] rounded-xl overflow-hidden mb-6">
+        <div className="relative w-full h-40 sm:h-60 md:h-76 lg:h-84 xl:h-[25rem] rounded-xl overflow-hidden mb-5">
           <Image
             src="/images/retreats/retreats-hero.jpg"
             alt="Yoga retreat in mountains with three women practicing warrior pose"

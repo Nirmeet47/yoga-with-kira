@@ -10,11 +10,11 @@ const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto flex flex-col px-4 sm:px-6 lg:px-8 xl:px-12 py-4 sm:py-6 lg:py-8">
         
         {/* Top: Text part */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-start lg:items-center gap-4 lg:gap-6 xl:gap-8 text-center lg:text-left">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 xl:gap-8 text-center lg:text-left items-start">
           
           {/* Left: Heading */}
           <div className="order-1">
-            <h1 className="font-amaranth text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light leading-tight sm:leading-snug text-gray-900">
+            <h1 className="font-amaranth text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900 m-0 p-0">
               Our Journey from <br className="hidden sm:block" />
               Yoga to <span className="text-[#A9D941]">Kira</span>
             </h1>
@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
 
           {/* Right: Paragraph + Button */}
           <div className="order-2 max-w-xl mx-auto lg:mx-0">
-            <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-6 sm:mb-8">
+            <p className="text-gray-700 text-sm lg:text-base leading-relaxed mb-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
               et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
               aliquip ex ea commodo consequat.
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
               <div className="flex items-center justify-center lg:justify-start">
                 <button
                   type="submit"
-                  className="bg-[#2E4023] hover:bg-[#24361b] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-medium transition-colors duration-200 flex-shrink-0"
+                  className="bg-[#2E4023]  text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-medium flex-shrink-0"
                 >
                   Book a session
                 </button>
@@ -48,8 +48,8 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* Img */}
-        <div className="relative w-full h-64 sm:h-80 md:h-88 lg:h-[22rem] xl:h-[22rem] rounded-xl sm:rounded-2xl overflow-hidden mt-4 sm:mt-6 lg:mt-8">
+        {/* Main Image */}
+        <div className="relative w-full h-70 sm:h-86 md:h-94 lg:h-[23rem] xl:h-[25rem] rounded-xl sm:rounded-2xl overflow-hidden mt-4 sm:mt-6 lg:mt-8">
           <Image
             src="/images/about/about-hero.png"
             alt="Yoga session"
@@ -60,14 +60,14 @@ const Hero: React.FC = () => {
           />
         </div>
 
-        {/*  Text section */}
-        <div className="pt-12 sm:pt-16 lg:pt-20">
-          <div className="text-center max-w-5xl mx-auto">
+        {/* Bottom Text Section */}
+        <div className="pt-8 sm:pt-12 lg:pt-14">
+          <div className="text-center mx-auto">
             <h2 className="text-gray-900 font-amaranth text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium mb-4 sm:mb-6 leading-tight">
               Where Ancient Wisdom Meets Modern Life for Healing,
               <br className="hidden sm:block" /> Balance, and Presence.
             </h2>
-            <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed max-w-4xl mx-auto">
+            <p className="text-gray-700 text-sm lg:text-base leading-relaxed max-w-4xl mx-auto">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
               dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
