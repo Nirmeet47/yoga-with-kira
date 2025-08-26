@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 
 const retreatData = [
   {
@@ -41,7 +42,7 @@ export default function NextRetreatsComponent() {
   return (
     <div className="bg-[#f7f7f5]">
       {/* Header */}
-      <div className="text-center py-12 px-6">
+      <div className="text-center pb-16 px-6">
         <h2 className="font-amaranth text-4xl md:text-5xl font-light mb-6">
           <span className="text-[#A9D941] font-medium">Next</span>{' '}
           <span className="text-black">Retreats</span>
@@ -70,9 +71,11 @@ export default function NextRetreatsComponent() {
               className="flex-shrink-0 h-full px-3"
               style={{ width: '50vw' }}
             >
-              <img
+              <Image
                 src={retreat.image}
                 alt={retreat.destination}
+                width={800}       
+                height={450}     
                 className="w-full h-full object-cover rounded-2xl shadow-lg"
               />
             </div>
@@ -81,7 +84,7 @@ export default function NextRetreatsComponent() {
       </div>
 
       {/* Destination Info */}
-      <div className=" px-6 py-12 text-center">
+      <div className="px-6 py-12 text-center">
         <p className="font-amaranth text-black mb-6 text-xl">
           Our next yoga travel destination is{' '}
           <span className="text-[#A9D941] font-medium">
@@ -94,7 +97,7 @@ export default function NextRetreatsComponent() {
           <button className="bg-[#35402A] text-white px-8 py-2 rounded-full text-lg font-medium transition-colors duration-300">
             Know more
           </button>
-          <button className="bg-[#A9D941] border-4 border-[#35402A] px-3 py-3 rounded-full transition-colors duration-300">
+          <button className="bg-[#A9D941] border-3 border-[#35402A] px-3 py-3 rounded-full transition-colors duration-300">
             <ArrowRight className="w-4 h-4 text-[#35402A]" />
           </button>
         </div>

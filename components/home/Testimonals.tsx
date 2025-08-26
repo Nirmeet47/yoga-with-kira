@@ -39,7 +39,7 @@ const TestimonialsCarousel = () => {
     if (!isTransitioning) {
       setTimeout(() => setIsTransitioning(true), 50);
     }
-  }, [currentIndex, isTransitioning, testimonials]);
+  }, [currentIndex, isTransitioning]);
 
   const getCardStyles = (index: number, isCenter: boolean) => `
     rounded-2xl p-6 text-center border flex-shrink-0 transition-all duration-700

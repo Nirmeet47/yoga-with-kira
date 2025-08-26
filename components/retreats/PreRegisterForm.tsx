@@ -1,30 +1,42 @@
-"use client";
-import { useState } from "react";
-import { Calendar, ArrowRight } from "lucide-react";
+'use client'
+
+import { useState, ChangeEvent, FormEvent } from 'react'
+import { Calendar, ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 
 export default function PreRegisterForm() {
   const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    dob: "",
-  });
+    fullName: '',
+    email: '',
+    phone: '',
+    dob: '',
+  })
 
-  const handleInputChange = (e: any) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    });
-  };
+    })
+  }
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    console.log(formData)
+    // submit logic here
+  }
 
   return (
     <div className="relative bg-[#f7f7f5] py-16 px-4 overflow-hidden">
       {/* Decorative Top-Right Image */}
-      <img
-        src="/images/retreats/register-form-bg.png"
-        alt="Decorative"
-        className="absolute top-0 right-0 w-32 md:w-48 lg:w-64 pointer-events-none select-none"
-      />
+      <div className="absolute top-0 right-0 w-32 md:w-48 lg:w-64 pointer-events-none select-none">
+        <Image
+          src="/images/retreats/register-form-bg.png"
+          alt="Decorative"
+          width={256} // approximate for lg:w-64
+          height={256}
+          className="w-full h-auto"
+        />
+      </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header Section */}
@@ -43,7 +55,10 @@ export default function PreRegisterForm() {
         </div>
 
         {/* Form Section */}
-        <div className="bg-[#35402A] rounded-3xl p-8 md:p-12 shadow-2xl w-full">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-[#35402A] rounded-3xl p-8 md:p-12 shadow-2xl w-full"
+        >
           <h2 className="text-white text-4xl md:text-5xl font-amaranth font-bold text-center mb-10">
             Reserve Your Spot
           </h2>
@@ -100,18 +115,24 @@ export default function PreRegisterForm() {
             {/* Submit Button with Arrow */}
             <div className="flex justify-center items-center">
               {/* Main Button */}
-              <button className="bg-[#A9D941] font-semibold text-[#35402A] px-8 py-3 rounded-full text-lg ">
+              <button
+                type="submit"
+                className="bg-[#A9D941] font-semibold text-[#35402A] px-8 py-3 rounded-full text-lg"
+              >
                 I&apos;m Interested
               </button>
 
               {/* Arrow Button */}
-              <button className="bg-white border-4 border-[#A9D941] p-3 rounded-full transition-colors duration-300">
+              <button
+                type="button"
+                className="bg-white border-4 border-[#A9D941] p-3 rounded-full transition-colors duration-300"
+              >
                 <ArrowRight className="w-6 h-6 text-[#35402A]" />
               </button>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
-  );
+  )
 }
